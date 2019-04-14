@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Zad1</string>
+    <string name="todo">TODO</string>
+    <string name="change_contact">Change Contact</string>
+    <string name="change_sound">Change sound</string>
+    <string name="radiobutton">RadioButton</string>
+    <string name="micha_zi_ba">Michał Zięba</string>
+    <string name="jan_kowalski">Jan Kowalski</string>
+    <string name="kamil_nowak">Kamil Nowak</string>
+    <string name="john_smith">John Smith</string>
+    <string name="jakub_anonimowy">Jakub Anonimowy</string>
+    <string name="geralt_z_rivii">Geralt z Rivii</string>
+    <string name="bezimienny">Bezimienny</string>
+    <string name="accept">accept</string>
+    <string name="cancel">cancel</string>
+    <string name="button">Button</string>
+
+    <string-array name="spin">
+        <item>Sound1</item>
+        <item>Sound2</item>
+        <item>Sound3</item>
+        <item>Sound4</item>
+        <item>Sound5</item>
+    </string-array>
+</resources>
