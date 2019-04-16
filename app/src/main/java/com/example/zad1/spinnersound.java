@@ -20,6 +20,10 @@ public class spinnersound extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinnersound);
 
+        Intent t = getIntent();
+        final int temp = t.getIntExtra("temp2",0);
+        final String temp2 = Integer.toString(temp);
+
         Spinner spinner = findViewById(R.id.spinner1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.spin, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -31,7 +35,8 @@ public class spinnersound extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(spinnersound.this, MainActivity.class);
-                startActivity(intent);
+                intent.putExtra("spin1",temp2);
+                setResult(RESULT_OK,intent);
                 finish();
             }
         });
@@ -42,7 +47,8 @@ public class spinnersound extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v){
                 Intent intent = new Intent(spinnersound.this, MainActivity.class);
                 intent.putExtra("spin1",text);
-                startActivity(intent);
+                setResult(RESULT_OK,intent);
+                finish();
             }
         });
     }
@@ -51,6 +57,7 @@ public class spinnersound extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
         text = parent.getItemAtPosition(position).toString();
+
     }
 
     @Override

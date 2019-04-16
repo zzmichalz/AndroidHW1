@@ -23,12 +23,16 @@ public class radiobutton extends AppCompatActivity {
 
         radioGroup = findViewById(R.id.radioGroup);
 
+        Intent t = getIntent();
+        final String temp = t.getStringExtra("temp");
+
         cancel = (Button) findViewById(R.id.button4);
         cancel.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(radiobutton.this, MainActivity.class);
-                startActivity(intent);
+                intent.putExtra("radioButton",temp);
+                setResult(RESULT_OK,intent);
                 finish();
             }
         });
@@ -42,8 +46,9 @@ public class radiobutton extends AppCompatActivity {
 
                 Intent intent = new Intent(radiobutton.this, MainActivity.class);
                 intent.putExtra("radioButton",radioButton.getText().toString());
-                startActivity(intent);
-            }
+                setResult(RESULT_OK,intent);
+                finish();
+        }
         });
     }
 }

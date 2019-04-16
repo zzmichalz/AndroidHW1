@@ -16,10 +16,10 @@
     <string name="button">Button</string>
 
     <string-array name="spin">
-        <item>Sound1</item>
-        <item>Sound2</item>
-        <item>Sound3</item>
-        <item>Sound4</item>
-        <item>Sound5</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
     </string-array>
 </resources>
